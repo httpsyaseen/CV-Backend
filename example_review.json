@@ -1,0 +1,623 @@
+{
+  "review_type": "premium",
+  "sections": [
+    {
+      "section_name": "Personal Details",
+      "section_status": "ok",
+      "strengths": [
+        "Medical Council of Ireland registration number provided and marked Active.",
+        "Professional email address supplied.",
+        "No DOB, photo, or marital status included, which aligns with UK/IE norms."
+      ],
+      "weaknesses": [
+        "City and country of residence are missing.",
+        "Right-to-work/visa status for Ireland not stated.",
+        "Only a Pakistan phone number listed; no Irish/UK number or time-zone note.",
+        "No LinkedIn or professional profile link for quick recruiter screening."
+      ],
+      "actionable_edits": [
+        "Add your current city and country (e.g., \"Muzaffargarh, Pakistan\" or \"Dublin, Ireland\" if relocated).",
+        "Include right-to-work status for Ireland (e.g., stamp/permit type) or a clear relocation statement with timeline.",
+        "Add an Irish/UK contact number if available, or note your time zone and WhatsApp availability.",
+        "Standardise regulator wording: \"Medical Council of Ireland (MCI) 513952 — Active; Pakistan Medical Council 757002-01-M.\"",
+        "Optionally add a LinkedIn URL with a concise, matching profile."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Medical Council of Ireland: 513952 (Active) Pakistan Medical Council: 757002-01-M",
+          "better": "Medical Council of Ireland (MCI) 513952 — Active; Pakistan Medical Council 757002-01-M",
+          "why_better": "Uses standard regulator naming and punctuation, improves ATS parsing, and increases readability."
+        },
+        {
+          "bad": "Phone: +92 331 6943534",
+          "better": "Phone: +92 331 6943534 | Alternative: [+353 number if available] | Time zone: PKT (UTC+5)",
+          "why_better": "Gives recruiters a local/alternative contact and sets expectations for call availability."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 3,
+      "justification": "Core regulatory and contact details are present but lack location, right-to-work, and recruiter-friendly contact options."
+    },
+    {
+      "section_name": "Education & Qualifications",
+      "section_status": "ok",
+      "strengths": [
+        "MBBS (2022) clearly stated with awarding institution.",
+        "Strong OET scores (A/A/B/B) already achieved.",
+        "Relevant life support and critical care training included."
+      ],
+      "weaknesses": [
+        "IELTS entry is ambiguous (appears future-dated without scores).",
+        "Degrees/exams are mixed with CPD/courses and presented in a table, which is not ATS-friendly.",
+        "Dates not consistently formatted in reverse-chronological order."
+      ],
+      "actionable_edits": [
+        "Separate Degrees/Exams (MBBS, OET/IELTS) from CPD & Courses.",
+        "Clarify IELTS status: remove if not yet achieved or add score/date if completed.",
+        "Use reverse-chronological format with MMM YYYY and standardise awarding bodies (e.g., \"ACLS — 2025, Recep Tayyip Erdogan Hospital\").",
+        "Drop pre-med/matriculation unless space allows; focus on higher qualifications relevant to clinical practice."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "2025: IELTS September 2025",
+          "better": "IELTS: [Overall x.x], [Listening x.x, Reading x.x, Writing x.x, Speaking x.x] — [MMM YYYY]",
+          "why_better": "Replaces a vague future statement with verifiable results in recruiter-expected format (or a clear placeholder until available)."
+        },
+        {
+          "bad": "+------+---------------------------------+-----------------------------+ ... (table of courses)",
+          "better": "ACLS — 2025, Recep Tayyip Erdogan Hospital (applied to cardiac arrest simulations and code blue responses)\nBLS — 2024, Recep Tayyip Erdogan Hospital\nCritical Care Course — 2023, Aga Khan University",
+          "why_better": "Removes non-ATS tables and uses plain text with awarding bodies and brief relevance."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 3,
+      "justification": "Solid core credentials but needs clarity on IELTS and separation/normalisation of CPD items for ATS readability."
+    },
+    {
+      "section_name": "Employment History",
+      "section_status": "ok",
+      "strengths": [
+        "Clear progression from House Officer to Medical Officer (Registrar level).",
+        "Relevant exposure across nephrology, ICU, ED, and general medicine.",
+        "Achievement noted (Employee of the Quarter)."
+      ],
+      "weaknesses": [
+        "Lacks STAR/CAMP outcomes and metrics (e.g., results of initiatives, impact on patient care).",
+        "Some tasks read as generic lists; supervision/escalation context is limited in parts.",
+        "Date formats are non-standard (dd/mm/yyyy instead of MMM YYYY)."
+      ],
+      "actionable_edits": [
+        "Rewrite each role: one-line context + 4–6 impact bullets using STAR/CAMP, with supervision and escalation noted.",
+        "Add one mini-QIP/efficiency improvement per role where possible (e.g., dialysis scheduling, CT head PDSA cycles) with before/after data.",
+        "Convert dates to MMM YYYY – MMM YYYY and ensure reverse-chronology.",
+        "Anchor complex tasks to supervision (consultant/registrar), especially imaging interpretation and procedures."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Managed surgical emergency patients.",
+          "better": "Received trauma referrals in ED; initiated ABCDE, ordered imaging per NICE head injury pathway, and escalated to the on-call registrar; documented with ISBAR and safety-netting, enabling timely theatre listing where indicated.",
+          "why_better": "Shows pathway use, escalation, technique, and an outcome focus rather than a generic task."
+        },
+        {
+          "bad": "Interpretation of CT brain, MRI Spine and brain.",
+          "better": "Reviewed CT brain/MRI spine findings at the workstation with the registrar and discussed impression with the consultant; documented provisional interpretation and changed management accordingly (e.g., anticoagulation hold, neurosurgery referral).",
+          "why_better": "Adds supervision, team discussion, and management impact, reducing risk of over-claiming."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Good breadth and context but thin on measurable results and structured examples; needs STAR-based rewrites and standardised dates."
+    },
+    {
+      "section_name": "Supporting Information",
+      "section_status": "missing",
+      "strengths": [],
+      "weaknesses": [],
+      "actionable_edits": [],
+      "examples_bad_to_better": [],
+      "missing_content": [
+        "Empty section"
+      ],
+      "section_score": 0,
+      "justification": "Section missing."
+    },
+    {
+      "section_name": "Personal Statement",
+      "section_status": "missing",
+      "strengths": [],
+      "weaknesses": [],
+      "actionable_edits": [],
+      "examples_bad_to_better": [],
+      "missing_content": [
+        "Empty section"
+      ],
+      "section_score": 0,
+      "justification": "Section missing."
+    },
+    {
+      "section_name": "Clinical Skills & Procedures",
+      "section_status": "ok",
+      "strengths": [
+        "Relevant nephrology and acute care procedures listed.",
+        "Includes ultrasound-guided renal biopsy and central access for dialysis."
+      ],
+      "weaknesses": [
+        "No supervision level, frequency/volume, or safety statements.",
+        "Mixed phrasing (\"assisting\" vs. \"insertion\") may confuse scope of competence."
+      ],
+      "actionable_edits": [
+        "Group by domains (Renal, Vascular access, Lumbar puncture, Pleural/ascitic taps).",
+        "Add supervision level and approximate volume (e.g., \"under consultant supervision; ~[n]\").",
+        "Include a brief safety anchor and escalation rule (e.g., \"ultrasound confirmation, post-procedure monitoring\").",
+        "Add one short incident showing safe practice and learning."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Ultrasound guided Renal Biopsies using Monopty Gun.",
+          "better": "Ultrasound-guided renal biopsy — under consultant supervision; ~[number] performed; strict post-biopsy monitoring and escalation plan for bleeding.",
+          "why_better": "Clarifies supervision, scale, and safety, matching recruiter expectations."
+        },
+        {
+          "bad": "Femoral venous catheterization for dialysis",
+          "better": "Insertion of femoral venous dialysis catheters — under [registrar/consultant] supervision; ultrasound-guided; adhered to full sterile precautions and line check protocol.",
+          "why_better": "Adds supervision and process detail to demonstrate safe competence."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Appropriate list but missing competence framing (supervision/volumes) and safety context that UK/IE recruiters expect."
+    },
+    {
+      "section_name": "Teaching & Education",
+      "section_status": "ok",
+      "strengths": [
+        "Delivered a large lecture (approx. 200 attendees) on psychiatric awareness.",
+        "Regular departmental teaching and undergraduate tutoring experience."
+      ],
+      "weaknesses": [
+        "No feedback data (scores/comments) or redesign across sessions.",
+        "Frequencies and outcomes not specified; teaching impact not evidenced."
+      ],
+      "actionable_edits": [
+        "Add audience, frequency, and approximate attendees for each teaching activity.",
+        "Capture feedback metrics (scores or qualitative comments) and include at least one redesign that improved results.",
+        "Link teaching to practice change (e.g., improved documentation, junior confidence)."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "I delivered a national level lecture to 200 attendees at Islamia University Bahawalpur on psychiatric awareness.",
+          "better": "Delivered a psychiatry awareness lecture to ~200 attendees (Islamia University Bahawalpur); incorporated case vignettes and a pre/post quiz, which showed improved recognition of red flags; incorporated attendee feedback to simplify diagnostic criteria slides.",
+          "why_better": "Adds scale, method, and outcome, showing reflective improvement."
+        },
+        {
+          "bad": "I also did regular teaching during my house job.",
+          "better": "Facilitated weekly bedside teaching for 3rd-year medical students during my house job; used structured history templates; students reported improved confidence in focused neurological examination.",
+          "why_better": "Specifies frequency, audience, and learner outcome rather than a vague claim."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Good scope but missing feedback and redesign evidence; can be strengthened with simple metrics."
+    },
+    {
+      "section_name": "Audits, QIPs & Research",
+      "section_status": "ok",
+      "strengths": [
+        "Multiple QIPs listed across dialysis quality and NICE CT head indications.",
+        "SOP development and EMR committee involvement show systems thinking."
+      ],
+      "weaknesses": [
+        "No baselines, standards, or re-measurement outcomes are provided.",
+        "Research project only at IRB approval stage with no interim outputs."
+      ],
+      "actionable_edits": [
+        "For each QIP, state the standard (e.g., KDIGO, NICE), baseline (n/%), intervention, and re-audit result (n/%).",
+        "Add dissemination details (meeting/presentation/poster) and sustainability (who owns the change).",
+        "For research, add design, sample size, role, and projected outputs (abstract/poster/manuscript)."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "I recently completed QIP (Quality of Dialysis according to KDIGO) in my Dialysis Unit.",
+          "better": "Audited dialysis quality against KDIGO standards; baseline compliance [n/%]; introduced SOP bundle and staff briefing; re-audit at 3 months showed improvement to [n/%]; presented at departmental governance with plan for 6‑monthly monitoring.",
+          "why_better": "Follows audit cycle (baseline → intervention → re-measure → dissemination) with clear standards."
+        },
+        {
+          "bad": "I ran 3 PDSA cycles for the compliance to the NICE guidelines for the indication of CT scan in trauma patients.",
+          "better": "Completed three PDSA cycles on NICE head injury CT indications; baseline adherence [n/%]; introduced an ED prompt card and triage checklist; third cycle demonstrated [n/%] adherence with fewer missed indications.",
+          "why_better": "Shows iterative improvement with a concrete intervention and outcome."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Strong activity list without the data that proves impact; adding baselines and re-measure will lift this to a 3–4."
+    },
+    {
+      "section_name": "Leadership & Management",
+      "section_status": "ok",
+      "strengths": [
+        "Led dialysis scheduling and waiting list coordination.",
+        "Managed rotas, including complex holiday coverage during Eid.",
+        "Chairs/organises staff meetings under consultant supervision."
+      ],
+      "weaknesses": [
+        "Impact is not quantified; no explicit SPIES/incident examples.",
+        "No stakeholder feedback or sustainability statements."
+      ],
+      "actionable_edits": [
+        "Quantify scope (e.g., number of dialysis patients/sessions per week) and outcome (e.g., reduced cancellations).",
+        "Add a brief SPIES-style vignette (conflict/short staffing → action → outcome → learning).",
+        "Note sustainability (handover of rota template, standing agenda for meetings)."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Supervision of Dialysis Unit along with the maintenance of patients scheduling system and waiting list.",
+          "better": "Coordinated dialysis unit scheduling and waiting list under consultant oversight; introduced a shared weekly plan that reduced last-minute cancellations and improved patient flow.",
+          "why_better": "Shows supervision context and a plausible outcome aligned to service delivery."
+        },
+        {
+          "bad": "Managed Rota for Dialysis Unit staff, at Eid festival such that all patients received therapy before or after 2 holidays that each staff member got.",
+          "better": "Redesigned the Eid rota to balance staff leave with clinical demand; ensured all patients received timely dialysis while each staff member secured two leave days; received positive feedback from nursing lead.",
+          "why_better": "Demonstrates constraint balancing, planning, and stakeholder satisfaction."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 3,
+      "justification": "Clear leadership responsibilities with potential for measurable impact; requires concise outcomes and stakeholder feedback to maximise score."
+    },
+    {
+      "section_name": "Teamwork & Communication",
+      "section_status": "ok",
+      "strengths": [
+        "States patient communication and MDT collaboration in profile.",
+        "Experience across ED/ICU/wards implies regular handover and escalation."
+      ],
+      "weaknesses": [
+        "No concrete examples of family communication or MDT handover using frameworks (ISBAR/teach-back).",
+        "No reflective learning or change in practice documented."
+      ],
+      "actionable_edits": [
+        "Add one family-communication vignette using teach-back and safety-netting.",
+        "Add one MDT handover vignette using ISBAR, including escalation to registrar/consultant.",
+        "Conclude each example with a learning point and how you now apply it."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Patient communication and education.",
+          "better": "Discussed AKI with a patient and family; used teach-back to confirm understanding of fluid balance and red flags; provided written safety-netting and arranged follow-up call.",
+          "why_better": "Transforms a generic skill into a safe, framework-based example with an outcome."
+        },
+        {
+          "bad": "Collaboration in multidisciplinary teams.",
+          "better": "Led an ISBAR handover to ICU for a deteriorating patient; escalated early to the registrar; coordinated with nursing and dialysis staff to stabilise before transfer.",
+          "why_better": "Shows structured communication, escalation, and teamwork under pressure."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 1,
+      "justification": "Evidence is implied but not demonstrated; add two concise vignettes to show safe, structured communication."
+    },
+    {
+      "section_name": "CPD & Courses",
+      "section_status": "ok",
+      "strengths": [
+        "Holds ACLS and BLS with recent dates.",
+        "Completed Critical Care Course and multiple research-related modules."
+      ],
+      "weaknesses": [
+        "Presented in a table; lacks reflection or application to practice.",
+        "Some modules (e.g., CITI) need clear relevance to clinical role."
+      ],
+      "actionable_edits": [
+        "Move all courses to a CPD section in plain text, reverse-chronological.",
+        "Add one line of applied learning for key courses (e.g., ALS impact on arrest response).",
+        "Group research/governance modules together and link to EMR committee/QIPs."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "ACLS — 2025 (table entry)",
+          "better": "ACLS — 2025, Recep Tayyip Erdogan Hospital; applied to code blue simulations and arrest calls under consultant oversight.",
+          "why_better": "Removes table formatting and shows direct practice application."
+        },
+        {
+          "bad": "Critical Care Course — 2023, Agha Khan University",
+          "better": "Critical Care Course — 2023, Aga Khan University; reinforced ventilator basics and sepsis bundles, used during ICU on-calls.",
+          "why_better": "Links CPD to workplace behaviours and patient safety."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 3,
+      "justification": "Relevant and recent CPD; converting to ATS-friendly format with applied learning will make this recruiter-ready."
+    },
+    {
+      "section_name": "Publications & Presentations",
+      "section_status": "ok",
+      "strengths": [
+        "Poster presented on World Kidney Day.",
+        "Delivered a large audience lecture (psychiatry awareness)."
+      ],
+      "weaknesses": [
+        "No citation details (event, date, authors) or outcome.",
+        "No peer-reviewed publications listed."
+      ],
+      "actionable_edits": [
+        "Provide full references for the poster (title, authors, event, venue, date).",
+        "List invited/selected talks with date, venue, and role.",
+        "If available, add any awards or uploads (e.g., conference abstract link)."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Poster presentation with the title of “Kidney Care”.",
+          "better": "Zohaib Bin Nawaz M, [Co-authors]. Kidney Care. Poster presented at World Kidney Day event, [City], [MMM YYYY].",
+          "why_better": "Uses a consistent reference style with authors, event, and date for credibility."
+        },
+        {
+          "bad": "I delivered a national level lecture to 200 attendees at Islamia University Bahawalpur on psychiatric awareness.",
+          "better": "Invited lecture: Psychiatric Awareness — Islamia University Bahawalpur, [MMM YYYY]; ~200 attendees; role: speaker.",
+          "why_better": "Converts a narrative line into a standardised presentation entry with date, venue, and role."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 1,
+      "justification": "Presentations exist but lack structured citations; no publications; add consistent references to improve credibility."
+    },
+    {
+      "section_name": "Awards & Prizes",
+      "section_status": "ok",
+      "strengths": [
+        "Recognised as Employee of the Quarter at current hospital."
+      ],
+      "weaknesses": [
+        "No date, selection criteria, or unit-level impact provided."
+      ],
+      "actionable_edits": [
+        "Add the month/year of the award and awarding body/department.",
+        "Briefly state the criteria or reasons (e.g., service improvement, teaching).",
+        "Add one line on how learning translated to practice or service outcomes."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Selected as the Employee of the Quarter in the whole Hospital.",
+          "better": "Employee of the Quarter — Recep Tayyip Erdogan Hospital, [MMM YYYY]; recognised for dialysis scheduling improvements and trainee teaching.",
+          "why_better": "Provides context, date, and a concrete reason that aligns with service improvement."
+        },
+        {
+          "bad": "Recently got nominated and ultimately selected as the Employee of the Quarter.",
+          "better": "Awarded Employee of the Quarter following nomination by the nephrology team for leadership during rota redesign.",
+          "why_better": "Shows peer recognition and a specific contribution."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Good achievement but missing specifics; adding date/criteria will increase credibility."
+    },
+    {
+      "section_name": "Referees",
+      "section_status": "ok",
+      "strengths": [
+        "Three referees listed including current consultant supervisor.",
+        "Contact details and roles provided."
+      ],
+      "weaknesses": [
+        "International phone numbers may deter quick calls; consent and recency not stated.",
+        "Formatting can be streamlined; consider \"available on request\" in early application stages."
+      ],
+      "actionable_edits": [
+        "Confirm GDPR consent and preferred contact method for each referee.",
+        "Add seniority/title and relationship (e.g., \"current supervising consultant\").",
+        "Provide an Ireland/UK contact where available or list emails as primary.",
+        "Consider summarising as \"available on request\" on the CV and provide full details at application."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "Dr Sobia Tariq (Consultant Nephrologist Recep Tayyip Erdoğan Hospital, Muzaffargarh) - Phone: +92-341-8095890; Email: sobia.tariq01@tih.org.pk",
+          "better": "Dr Sobia Tariq, Consultant Nephrologist, Recep Tayyip Erdogan Hospital — Current supervising consultant; Email: sobia.tariq01@tih.org.pk (preferred).",
+          "why_better": "Clarifies relationship, streamlines format, and sets preferred contact."
+        },
+        {
+          "bad": "Dr Muhammad Tahsin Akhtar (Consultant Psychiatrist Nishtar Hospital, Multan.)",
+          "better": "Dr Muhammad Tahsin Akhtar, Consultant Psychiatrist, Nishtar Hospital — Former supervisor (Psychiatry rotation).",
+          "why_better": "Adds context and relationship to validate relevance."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 3,
+      "justification": "Appropriate referees; minor formatting and consent notes will align with UK/IE expectations."
+    },
+    {
+      "section_name": "Formatting & Style",
+      "section_status": "ok",
+      "strengths": [
+        "Clear headings with logical grouping.",
+        "Bullet points aid readability in places."
+      ],
+      "weaknesses": [
+        "Non-ATS table for courses; mixed date formats (dd/mm/yyyy).",
+        "Some long sentences and generic adjectives (e.g., \"highly skilled\").",
+        "Inconsistent hyphenation/capitalisation (e.g., \"Agha\" vs \"Aga\")."
+      ],
+      "actionable_edits": [
+        "Use reverse-chronological order and MMM YYYY – MMM YYYY with en dashes.",
+        "Replace tables with plain text lists; keep lines under ~20 words where possible.",
+        "Use active verbs and STAR/CAMP mini-examples; trim adjectives and add outcomes.",
+        "Standardise UK spelling and names (e.g., \"Aga Khan University\")."
+      ],
+      "examples_bad_to_better": [
+        {
+          "bad": "House Officer | 03/06/2022 To 02/06/2023 (Nishtar Hospital Multan)",
+          "better": "House Officer — Jun 2022 – Jun 2023, Nishtar Hospital, Multan",
+          "why_better": "Normalises dates, adds en dash, and standardises employer/location format."
+        },
+        {
+          "bad": "A dedicated and highly skilled Medical Officer (Registrar) with extensive experience...",
+          "better": "Medical Officer (Registrar) with nephrology, ICU, and ED experience; escalates early, follows guidelines, and contributes to QIPs (e.g., dialysis SOPs).",
+          "why_better": "Replaces vague adjectives with evidence-backed, recruiter-relevant content."
+        }
+      ],
+      "missing_content": [],
+      "section_score": 2,
+      "justification": "Readable but not ATS-optimised; applying standard formatting and concise, evidence-led phrasing will improve screenability."
+    },
+    {
+      "section_name": "Other",
+      "section_status": "missing",
+      "strengths": [],
+      "weaknesses": [],
+      "actionable_edits": [],
+      "examples_bad_to_better": [],
+      "missing_content": [
+        "Empty section"
+      ],
+      "section_score": 0,
+      "justification": "Section missing."
+    }
+  ],
+  "global_summary": {
+    "overall_readiness": "Needs work",
+    "top_fixes": [
+      "Create a concise Personal Statement aligned to Irish medical posts with 2–3 STAR examples (safety/communication/QIP).",
+      "Restructure Employment History with STAR/CAMP bullets, add supervision/escalation and measurable outcomes.",
+      "Complete QIP/Audit cycles with baseline → intervention → re-measure → dissemination; add results for dialysis KDIGO and CT head projects.",
+      "Add supervision level and approximate volumes to Clinical Skills, with one safety-anchored incident.",
+      "Standardise formatting (MMM YYYY, en dashes), remove tables, and separate CPD from Degrees/Exams."
+    ],
+    "questions_for_user": [
+      "What is your current city and country of residence?",
+      "What is your right-to-work/visa status for Ireland (e.g., Stamp/permit type) and availability to relocate?",
+      "IELTS status: have you completed it? If yes, what are the scores and date?",
+      "For the KDIGO dialysis QIP: what were the baseline and re-audit compliance figures (n/%) and the time intervals?",
+      "For the NICE head injury CT PDSA cycles: baseline adherence, specific interventions, and final adherence figures?",
+      "Employee of the Quarter: what month/year and brief criteria for selection?",
+      "For each procedure (renal biopsy, femoral DL catheter, LP, taps): approximate numbers performed and supervision levels?",
+      "For teaching sessions (departmental/house job): frequency, attendee numbers, and any feedback scores/comments?",
+      "Research (ESRD cardiomyopathy study): study design, sample size, your role, and expected outputs (abstract/manuscript)?",
+      "Do you have a LinkedIn URL or professional profile to include?"
+    ],
+    "scoring_breakdown": [
+      {
+        "section_name": "Personal Details",
+        "score": 3
+      },
+      {
+        "section_name": "Education & Qualifications",
+        "score": 3
+      },
+      {
+        "section_name": "Employment History",
+        "score": 2
+      },
+      {
+        "section_name": "Supporting Information",
+        "score": 0
+      },
+      {
+        "section_name": "Personal Statement",
+        "score": 0
+      },
+      {
+        "section_name": "Clinical Skills & Procedures",
+        "score": 2
+      },
+      {
+        "section_name": "Teaching & Education",
+        "score": 2
+      },
+      {
+        "section_name": "Audits, QIPs & Research",
+        "score": 2
+      },
+      {
+        "section_name": "Leadership & Management",
+        "score": 3
+      },
+      {
+        "section_name": "Teamwork & Communication",
+        "score": 1
+      },
+      {
+        "section_name": "CPD & Courses",
+        "score": 3
+      },
+      {
+        "section_name": "Publications & Presentations",
+        "score": 1
+      },
+      {
+        "section_name": "Awards & Prizes",
+        "score": 2
+      },
+      {
+        "section_name": "Referees",
+        "score": 3
+      },
+      {
+        "section_name": "Formatting & Style",
+        "score": 2
+      },
+      {
+        "section_name": "Other",
+        "score": 0
+      }
+    ],
+    "total_score": 45
+  },
+  "rewritten_cv": {
+    "sections": [
+      {
+        "section_name": "Personal Details",
+        "content": "[Full name not specified] is registered with the Medical Council of Ireland (MCI 513952 — Active) and the Pakistan Medical Council (757002-01-M). He can be contacted at muhammadzohaibbinnawaz@gmail.com and on +92 331 6943534. [City, Country not specified]. [Right-to-work/visa status for Ireland not specified]. A LinkedIn profile can be added if available."
+      },
+      {
+        "section_name": "Profile",
+        "content": "Medical Officer (Registrar level) with experience across nephrology, critical care and emergency medicine in busy tertiary and primary care settings. Comfortable working within consultant-led teams, escalating early and adhering to guidelines such as KDIGO and NICE. Recent work includes managing renal emergencies, supporting ICU and ED on-calls, and contributing to dialysis unit service improvement through SOP development and rota design. He teaches regularly in the department and at undergraduate level, and participates in audits and QIPs, including dialysis quality and CT head indication compliance. He was recently recognised as Employee of the Quarter at his current hospital. He aims to contribute to the Irish healthcare system while progressing towards MRCPI training."
+      },
+      {
+        "section_name": "Employment History",
+        "content": "Medical Officer (Registrar level) — Recep Tayyip Erdogan Hospital, Muzaffargarh (semi-government tertiary care, ~500 beds; catchment ~4 million) — Mar 2024 – Present. In this consultant-led nephrology service, he provides registrar-level cover for the nephrology unit and participates in on-call coverage for medical wards, ICU and the Emergency Department. His work includes assessing and managing renal emergencies, coordinating care for patients with AKI and CKD, and supporting maintenance haemodialysis pathways. Under consultant supervision he has gained experience with ultrasound-guided renal biopsy and venous access for dialysis. He contributes to departmental teaching, rota management and quality improvement, including an anaemia eradication programme that he proposed and now leads under consultant oversight. He developed SOPs for the dialysis unit that continue to be used locally. He was selected as Employee of the Quarter for his contributions to service delivery and team support. A recent example involved a patient with suspected sepsis and AKI in ED: he initiated the sepsis pathway, arranged urgent labs and ultrasound, escalated to the registrar and consultant, and coordinated with dialysis nursing for timely dialysis planning, documenting handover with ISBAR. This reinforced early escalation, bundle-driven care and clear safety-netting in similar cases.\n\nMedical Officer — Javed Clinic, Murree — Jun 2023 – Feb 2024. In this primary care setting he assessed and treated common infections and chronic disease exacerbations such as COPD and asthma, and stabilised emergencies including trauma prior to referral. He provided follow-up for diabetes, hypertension and cardiovascular disease, counselling patients on adherence and red flags. He used local referral pathways and discussed complex cases with senior colleagues as needed. One example included stabilising a suspected DKA case with fluids and insulin per protocol, arranging transfer and communicating with the receiving team using a structured handover, which supported a safe transition and timely definitive care.\n\nHouse Officer — Nishtar Hospital, Multan (tertiary centre ~2,000 beds; high-volume ED) — Jun 2022 – Jun 2023. Rotations included Neurosurgery, General Surgery, Psychiatry and General Medicine. He participated in the conservative and perioperative management of intracranial bleeds and spine trauma under close consultant and registrar supervision, supported the acute surgical take, and contributed to the care of patients with malignant hypertension, diabetic ketoacidosis, COPD exacerbations, gastritis, AKI, ACS and stroke. He reviewed imaging at the workstation with seniors and documented agreed plans. In Psychiatry, he worked in OPD alongside the consultant, seeing patients with ADHD, schizophrenia, bipolar disorder and depression, and learned to prioritise risk assessment, capacity and safety planning."
+      },
+      {
+        "section_name": "Education & Qualifications",
+        "content": "MBBS — 2022, Nishtar Medical University, Multan.\nOET — 2023: Listening A, Reading A, Speaking B, Writing B. IELTS status: [Scores and date not specified].\nRelevant learning applied to practice includes using sepsis bundles and early escalation during acute deterioration, and structured documentation during handovers."
+      },
+      {
+        "section_name": "Clinical Skills & Procedures",
+        "content": "His procedural exposure includes ultrasound-guided renal biopsy, femoral venous catheter insertion for dialysis, diagnostic and therapeutic ascitic and pleural taps, lumbar puncture (sitting and lateral), and maintenance of IV access and blood sampling. He performs these within a supervised framework, adhering to sterile technique, ultrasound guidance where appropriate, post-procedure monitoring and clear escalation plans. For example, following a renal biopsy he ensured blood pressure control, monitored haemoglobin and observed for flank pain, escalating promptly to the consultant if concerns arose. Estimated volumes and supervision levels are available on request: [Volumes/supervision not specified]."
+      },
+      {
+        "section_name": "Teaching & Education",
+        "content": "He teaches regularly in the nephrology department and in other units such as ICU and paediatrics, tailoring content to a mixed audience of doctors and nurses. During his house job he delivered bedside teaching to 3rd-year medical students on history taking and common topics in one-to-one sessions. He delivered a psychiatric awareness lecture to approximately 200 attendees at Islamia University Bahawalpur, using case vignettes to build engagement. He incorporates feedback and aims to measure impact through simple tools such as pre/post questions and brief evaluations. Feedback metrics and teaching frequency are available on request: [Details not specified]."
+      },
+      {
+        "section_name": "Audits, QIPs & Research",
+        "content": "He completed a dialysis unit QIP against KDIGO standards, and wrote SOPs that remain in use locally. He ran three PDSA cycles to improve compliance with NICE head injury CT indications in ED, introducing practical prompts and checklists and re-measuring after implementing changes. He serves on the hospital Electronic Medical Record Review Committee, contributing a clinical perspective to system optimisation. Research: Frequency of Cardiomyopathies in patients with End-Stage Renal Disease on Maintenance Haemodialysis; IRB approval obtained; projected completion by mid‑Nov 2025. Baselines, re-measurement data and dissemination details will be added: [Metrics and outputs not specified]."
+      },
+      {
+        "section_name": "Leadership & Management",
+        "content": "He coordinates dialysis unit scheduling and waiting lists under consultant supervision, balancing clinical demand with staff availability. He holds fortnightly staff meetings in the nephrology department and manages rota planning, including redesign during Eid to ensure all patients received timely dialysis while staff secured leave. He focuses on early identification of bottlenecks, clear communication and maintaining safe staffing, and he hands over processes to sustain improvements."
+      },
+      {
+        "section_name": "Teamwork & Communication",
+        "content": "He works within consultant-led teams across nephrology, ICU and ED, escalating early for deteriorating patients and using ISBAR for handover. He prioritises patient and family communication, using teach-back to confirm understanding and written advice for safety-netting. For example, he explained AKI management and fluid balance to a family, checked understanding through teach-back and arranged appropriate follow-up, which improved adherence and early recognition of red flags."
+      },
+      {
+        "section_name": "CPD & Courses",
+        "content": "ACLS — 2025, Recep Tayyip Erdogan Hospital; applied during code blue simulations and cardiac arrest responses under consultant oversight. BLS Workshop — 2024, Recep Tayyip Erdogan Hospital. Critical Care Course — 2023, Aga Khan University, Karachi; reinforced ventilator basics and sepsis bundles used during ICU on-calls. CITI Program (Clinical Research Associates; Public Health Research; Information Privacy and Security; Basic Introduction to Biosafety) — 2024; informed governance work and EMR committee contributions."
+      },
+      {
+        "section_name": "Publications & Presentations",
+        "content": "Poster: Kidney Care — presented at a local conference for World Kidney Day, [City], [MMM YYYY]. Invited lecture: Psychiatric Awareness — Islamia University Bahawalpur, ~200 attendees, [MMM YYYY]. Full citations and dates can be added when confirmed."
+      },
+      {
+        "section_name": "Awards & Prizes",
+        "content": "Employee of the Quarter — Recep Tayyip Erdogan Hospital, [MMM YYYY], awarded for service improvement and team contributions within the nephrology unit."
+      },
+      {
+        "section_name": "Referees",
+        "content": "Dr Sobia Tariq, Consultant Nephrologist, Recep Tayyip Erdogan Hospital — current supervising consultant; contact details available on request. Dr Muhammad Tahsin Akhtar, Consultant Psychiatrist, Nishtar Hospital — former supervisor (Psychiatry rotation); contact details available on request. Dr Muhammad Yasir Shahzad, Head of Neuro-Trauma Unit, Nishtar Hospital — former supervisor; contact details available on request."
+      }
+    ]
+  },
+  "meta": {
+    "version": "v2",
+    "notes": "Time Investment & Application Strategy: Invest 20–30 hours to restructure your CV into evidence-led, ATS-ready sections with STAR/CAMP examples; then spend 1–2 hours tailoring per post. Plan: 1) Normalise formatting (MMM YYYY, en dashes) and separate Degrees vs CPD; 2) Rewrite Employment History with 2–3 STAR achievements per role, adding supervision/escalation; 3) Complete QIP cycles with baseline→intervention→re-measure→dissemination and add results; 4) Add a focused Personal Statement aligned to Irish registrar posts (safety, communication, QIP); 5) Gather feedback metrics for teaching and procedure volumes/supervision to evidence competence."
+  }
+}
