@@ -34,6 +34,7 @@ app.use(globalError);
 
 mongoose
   .connect(process.env.CLOUD_DB)
+  // .connect(process.env.LOCAL_DB)
   .then(() => {
     console.log("Connected to MongoDB");
   })

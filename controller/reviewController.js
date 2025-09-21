@@ -4,19 +4,21 @@ import catchAsync from "../utils/catchAsync.js";
 import AppError from "../utils/appError.js";
 
 const getReviewByUser = catchAsync(async (req, res, next) => {
-  const reviews = await Review.find({ userId: req.user._id })
-    .populate({
-      path: "cvId",
-      select:
-        "firstName lastName applyingForJobRole targetMarkets serviceLevel createdAt submittedAt status ",
-    })
-    .sort("-createdAt");
+  // const reviews = await Review.find({ userId: req.user._id })
+  //   .populate({
+  //     path: "cvId",
+  //     select:
+  //       "firstName lastName applyingForJobRole targetMarkets serviceLevel createdAt submittedAt status ",
+  //   })
+  //   .sort("-createdAt");
+
+  const reviewed = await CV.find({ userId: req.user._id, status: "reviewed" });
 
   res.status(200).json({
     status: "success",
-    results: reviews.length,
+    results: reviewed.length,
     data: {
-      reviews,
+      reviewed,
     },
   });
 });
@@ -46,7 +48,7 @@ const postReview = catchAsync(async (req, res, next) => {
 
   // Create review with uploaded JSON data
   const reviewData = {
-    ...req.body.review, // This will contain the entire JSON structure
+    ...req.body, // The entire JSON structure is in req.body
     cvId,
     userId: cv.userId._id,
     reviewer_id: req.user._id,
@@ -65,8 +67,9 @@ const postReview = catchAsync(async (req, res, next) => {
     .populate("userId", "firstName lastName email phoneNumber")
     .populate("reviewer_id", "firstName lastName email");
 
-  // Update CV status to reviewed after posting review
+  // Update CV status to reviewed and set reviewId after posting review
   cv.status = "reviewed";
+  cv.reviewId = review._id;
   await cv.save();
 
   res.status(201).json({
@@ -92,4 +95,42 @@ const postReview = catchAsync(async (req, res, next) => {
   });
 });
 
-export { postReview, getReviewByUser };
+const getReviewById = catchAsync(async (req, res, next) => {
+  const { reviewId } = req.params;
+
+  // Find the review and populate related data
+  const review = await Review.findById(reviewId).lean();
+
+  if (!review) {
+    return next(new AppError("Review not found", 404));
+  }
+
+  // Role-based access control
+  if (req.user.role === "admin") {
+    // Admin can see any review
+    res.status(200).json({
+      status: "success",
+      data: {
+        review,
+      },
+    });
+  } else if (req.user.role === "user") {
+    // User can only see reviews for their own CVs
+    if (review.userId._id.toString() !== req.user._id.toString()) {
+      return next(
+        new AppError("You can only access reviews for your own CVs", 403)
+      );
+    }
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        review,
+      },
+    });
+  } else {
+    return next(new AppError("Access denied", 403));
+  }
+});
+
+export { postReview, getReviewByUser, getReviewById };

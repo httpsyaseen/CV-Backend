@@ -89,7 +89,7 @@ const cvSchema = new Schema(
     // Page 1 - Basic Information
     firstName: {
       type: String,
-      required: [true, "First name is required"],
+      // required: [true, "First name is required"],
       maxlength: [60, "First name cannot exceed 60 characters"],
       match: [
         /^[A-Za-z]+$/,
@@ -109,13 +109,13 @@ const cvSchema = new Schema(
     },
     yearOfBirth: {
       type: Number,
-      required: [true, "Year of birth is required"],
+      // required: [true, "Year of birth is required"],
       min: [1900, "Year of birth cannot be before 1900"],
       max: [new Date().getFullYear(), "Year of birth cannot be in the future"],
     },
     yearOfMedicalGraduation: {
       type: Number,
-      required: [true, "Year of medical graduation is required"],
+      // required: [true, "Year of medical graduation is required"],
       min: [1900, "Year of medical graduation cannot be before 1900"],
       max: [
         new Date().getFullYear(),
@@ -124,7 +124,7 @@ const cvSchema = new Schema(
     },
     applyingForJobRole: {
       type: String,
-      required: [true, "Job role selection is required"],
+      // required: [true, "Job role selection is required"],
       enum: {
         values: ["tier1", "middleGrade", "consultant"],
         message: "Job role must be one of: Tier 1, Middle Grade, or Consultant",
@@ -132,7 +132,7 @@ const cvSchema = new Schema(
     },
     targetMarkets: {
       type: [String],
-      required: [true, "At least one target market must be selected"],
+      // required: [true, "At least one target market must be selected"],
       enum: {
         values: [
           "uk",
@@ -144,12 +144,12 @@ const cvSchema = new Schema(
         ],
         message: "Invalid target market selection",
       },
-      validate: {
-        validator: function (array) {
-          return array && array.length > 0;
-        },
-        message: "At least one target market must be selected",
-      },
+      // validate: {
+      //   validator: function (array) {
+      //     return array && array.length > 0;
+      //   },
+      //   message: "At least one target market must be selected",
+      // },
     },
 
     // Page 2 - Previous Experience and Employment
@@ -291,6 +291,10 @@ const cvSchema = new Schema(
     reviewedAt: {
       type: Date,
     },
+    reviewId: {
+      type: Schema.Types.ObjectId,
+      ref: "Review",
+    },
   },
   {
     timestamps: true,
@@ -341,10 +345,10 @@ cvSchema.statics.getWordLimits = function () {
   };
 };
 
-// Virtual for full name
-cvSchema.virtual("fullName").get(function () {
-  return `${this.firstName} ${this.lastName}`;
-});
+// // Virtual for full name
+// cvSchema.virtual("fullName").get(function () {
+//   return `${this.firstName} ${this.lastName}`;
+// });
 
 // Ensure virtual fields are serialized
 cvSchema.set("toJSON", { virtuals: true });

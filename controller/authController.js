@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import AppError from "../utils/appError.js";
 import { createHash } from "crypto";
 import { promisify } from "util";
-
+import sendingEmail from "../utils/sendEmail.js";
 const signToken = (id) =>
   jwt.sign({ id }, process.env.JWT_SECRET_KEY, {
     expiresIn: process.env.JWT_EXPIRE_TIME,
@@ -98,6 +98,8 @@ const forgotPassword = catchAsync(async (req, res, next) => {
   // Get user based on email
   const user = await User.findOne({ email: req.body.email });
 
+  console.log(user);
+
   if (!user) {
     return next(new AppError("No user found with this email address", 404));
   }
@@ -107,15 +109,35 @@ const forgotPassword = catchAsync(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
   console.log("Reset Token: ", resetToken);
 
-  res.status(200).json({
-    status: "success",
-    message: "Password reset token generated successfully",
-    data: {
-      resetToken: resetToken,
-      expiresIn: "10 minutes",
-      message: "Use this token with the reset-password endpoint",
-    },
-  });
+  try {
+    await sendingEmail({
+      to: user.email,
+      subject: "Your password reset token (valid for 10 minutes)",
+      text: `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: https://cv-frontend-ebon.vercel.app/reset-password/${resetToken}.\nIf you didn't forget your password, please ignore this email!`,
+    });
+
+    res.status(200).json({
+      status: "success",
+      message: "Password reset token sent to email successfully",
+      data: {
+        resetToken: resetToken,
+        expiresIn: "10 minutes",
+        message: "Use this token with the reset-password endpoint",
+      },
+    });
+  } catch (error) {
+    user.passwordResetLink = undefined;
+    user.passwordExpiresAt = undefined;
+    await user.save({ validateBeforeSave: false });
+
+    console.error("Email sending error:", error);
+    return next(
+      new AppError(
+        "There was an error sending the email. Please try again later.",
+        500
+      )
+    );
+  }
 });
 
 const resetPassword = catchAsync(async (req, res, next) => {

@@ -25,4 +25,32 @@ const getDashboardStats = catchAsync(async (req, res, next) => {
   });
 });
 
-export { getDashboardStats };
+const getAllCVS = catchAsync(async (req, res, next) => {
+  const cvs = await CV.find()
+    .populate("userId", "firstName lastName email")
+    .lean();
+
+  res.status(200).json({
+    status: "success",
+    results: cvs.length,
+    data: {
+      cvs,
+    },
+  });
+});
+
+const getAllReviewedCVS = catchAsync(async (req, res, next) => {
+  const cvs = await CV.find({ status: "reviewed" })
+    .populate("userId", "firstName lastName email")
+    .lean();
+
+  res.status(200).json({
+    status: "success",
+    results: cvs.length,
+    data: {
+      cvs,
+    },
+  });
+});
+
+export { getDashboardStats, getAllCVS, getAllReviewedCVS };
