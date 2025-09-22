@@ -282,7 +282,7 @@ const cvSchema = new Schema(
     // Metadata
     status: {
       type: String,
-      enum: ["pending", "reviewed"],
+      enum: ["pending", "reviewed", "in-progress"],
       default: "pending",
     },
     submittedAt: {

@@ -41,14 +41,14 @@ const postReview = catchAsync(async (req, res, next) => {
   }
 
   // Check if review already exists for this CV
-  const existingReview = await Review.findOne({ cvId });
-  if (existingReview) {
-    return next(new AppError("Review already exists for this CV", 400));
-  }
+  // const existingReview = await Review.findOne({ cvId });
+  // if (existingReview) {
+  //   return next(new AppError("Review already exists for this CV", 400));
+  // }
 
   // Create review with uploaded JSON data
   const reviewData = {
-    ...req.body, // The entire JSON structure is in req.body
+    ...req.body.review, // The entire JSON structure is in req.body
     cvId,
     userId: cv.userId._id,
     reviewer_id: req.user._id,
@@ -68,7 +68,7 @@ const postReview = catchAsync(async (req, res, next) => {
     .populate("reviewer_id", "firstName lastName email");
 
   // Update CV status to reviewed and set reviewId after posting review
-  cv.status = "reviewed";
+  cv.status = "in-progress";
   cv.reviewId = review._id;
   await cv.save();
 
