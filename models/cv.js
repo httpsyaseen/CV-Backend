@@ -171,12 +171,12 @@ const cvSchema = new Schema(
       validate: [
         {
           validator: wordCountValidator(1000),
-          message: "Research experience cannot exceed 1000 words",
+          message: "Research Experience cannot exceed 1000 words",
         },
         {
           validator: minWordValidator,
           message:
-            "Research experience must contain at least 5 words if provided",
+            "Research Experience must contain at least 5 words if provided",
         },
       ],
       trim: true,
@@ -187,63 +187,108 @@ const cvSchema = new Schema(
       validate: [
         {
           validator: wordCountValidator(1000),
-          message: "Teaching experience cannot exceed 1000 words",
+          message: "Teaching Experience cannot exceed 1000 words",
         },
         {
           validator: minWordValidator,
           message:
-            "Teaching experience must contain at least 5 words if provided",
+            "Teaching Experience must contain at least 5 words if provided",
         },
       ],
       trim: true,
       default: "",
     },
-    leadershipManagementExperience: {
+    leadershipAndManagement: {
       type: String,
       validate: [
         {
           validator: wordCountValidator(1000),
-          message:
-            "Leadership & management experience cannot exceed 1000 words",
+          message: "Leadership and Management cannot exceed 1000 words",
         },
         {
           validator: minWordValidator,
           message:
-            "Leadership & management experience must contain at least 5 words if provided",
+            "Leadership and Management must contain at least 5 words if provided",
         },
       ],
       trim: true,
       default: "",
     },
-    auditQualityImprovementExperience: {
+    qualityImprovementAndAudit: {
       type: String,
       validate: [
         {
           validator: wordCountValidator(1000),
-          message:
-            "Audit & quality improvement experience cannot exceed 1000 words",
+          message: "Quality Improvement and Audit cannot exceed 1000 words",
         },
         {
           validator: minWordValidator,
           message:
-            "Audit & quality improvement experience must contain at least 5 words if provided",
+            "Quality Improvement and Audit must contain at least 5 words if provided",
         },
       ],
       trim: true,
       default: "",
     },
-    clinicalSkillsProcedureCompetency: {
+    clinicalSkillsAndProcedures: {
       type: String,
       validate: [
         {
-          validator: wordCountValidator(1000),
-          message:
-            "Clinical skills & procedure competency cannot exceed 1000 words",
+          validator: wordCountValidator(500),
+          message: "Clinical Skills and Procedures cannot exceed 500 words",
         },
         {
           validator: minWordValidator,
           message:
-            "Clinical skills & procedure competency must contain at least 5 words if provided",
+            "Clinical Skills and Procedures must contain at least 5 words if provided",
+        },
+      ],
+      trim: true,
+      default: "",
+    },
+    teamworkAndCommunication: {
+      type: String,
+      validate: [
+        {
+          validator: wordCountValidator(1000),
+          message: "Teamwork and Communication cannot exceed 1000 words",
+        },
+        {
+          validator: minWordValidator,
+          message:
+            "Teamwork and Communication must contain at least 5 words if provided",
+        },
+      ],
+      trim: true,
+      default: "",
+    },
+    publicationsAndPresentations: {
+      type: String,
+      validate: [
+        {
+          validator: wordCountValidator(1000),
+          message: "Publications and Presentations cannot exceed 1000 words",
+        },
+        {
+          validator: minWordValidator,
+          message:
+            "Publications and Presentations must contain at least 5 words if provided",
+        },
+      ],
+      trim: true,
+      default: "",
+    },
+
+    others: {
+      type: String,
+      validate: [
+        {
+          validator: wordCountValidator(500),
+          message: "Others cannot exceed 500 words",
+        },
+        {
+          validator: minWordValidator,
+          message: "Others must contain at least 5 words if provided",
         },
       ],
       trim: true,
@@ -255,13 +300,31 @@ const cvSchema = new Schema(
       type: String,
       validate: [
         {
-          validator: wordCountValidator(2500),
-          message: "Personal statement cannot exceed 2500 words",
+          validator: wordCountValidator(500),
+          message: "Personal statement cannot exceed 500 words",
         },
         {
           validator: minWordValidator,
           message:
             "Personal statement must contain at least 5 words if provided",
+        },
+      ],
+      trim: true,
+      default: "",
+    },
+
+    //Page 5 - Supporting Statement
+    supportingStatement: {
+      type: String,
+      validate: [
+        {
+          validator: wordCountValidator(2500),
+          message: "Supporting statement cannot exceed 2500 words",
+        },
+        {
+          validator: minWordValidator,
+          message:
+            "Supporting statement must contain at least 5 words if provided",
         },
       ],
       trim: true,
@@ -338,10 +401,14 @@ cvSchema.statics.getWordLimits = function () {
     jobDescription: 750,
     researchExperience: 1000,
     teachingExperience: 1000,
-    leadershipManagementExperience: 1000,
-    auditQualityImprovementExperience: 1000,
-    clinicalSkillsProcedureCompetency: 1000,
-    personalStatement: 2500,
+    leadershipAndManagement: 1000,
+    qualityImprovementAndAudit: 1000,
+    clinicalSkillsAndProcedures: 500,
+    teamworkAndCommunication: 1000,
+    publicationsAndPresentations: 1000,
+    others: 500,
+    personalStatement: 500,
+    supportingStatement: 2500,
   };
 };
 
