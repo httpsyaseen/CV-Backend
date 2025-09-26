@@ -10,7 +10,9 @@ const getDashboardStats = catchAsync(async (req, res, next) => {
   const totalCVs = await CV.countDocuments();
 
   // Get total pending CVs count
-  const totalPendingCVs = await CV.countDocuments({ status: "pending" });
+  const totalPendingCVs = await CV.countDocuments({
+    status: { $ne: "reviewed" },
+  });
 
   // Get total reviews count
   const totalReviews = await CV.countDocuments({ status: "reviewed" });
