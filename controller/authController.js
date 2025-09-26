@@ -14,10 +14,10 @@ const signUp = catchAsync(async (req, res, next) => {
   const { firstName, lastName, email, password, phoneNumber } = req.body;
 
   // Check if all required fields are provided
-  if (!firstName || !lastName || !email || !password || !phoneNumber) {
+  if (!firstName || !lastName || !email || !password) {
     return next(
       new AppError(
-        "Please provide all required fields: firstName, lastName, email, password, phoneNumber",
+        "Please provide all required fields: firstName, lastName, email, password",
         400
       )
     );

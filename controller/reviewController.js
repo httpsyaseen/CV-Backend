@@ -40,12 +40,6 @@ const postReview = catchAsync(async (req, res, next) => {
     return next(new AppError("Can only post reviews for pending CVs", 400));
   }
 
-  // Check if review already exists for this CV
-  // const existingReview = await Review.findOne({ cvId });
-  // if (existingReview) {
-  //   return next(new AppError("Review already exists for this CV", 400));
-  // }
-
   // Create review with uploaded JSON data
   const reviewData = {
     ...req.body.review, // The entire JSON structure is in req.body
